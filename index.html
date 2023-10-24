@@ -19,7 +19,7 @@
               <li class="nav__li"><a href="#" class="nav__link">Home</a></li>
               <li class="nav__li"><a href="#" class="nav__link">About</a></li>
               <li class="nav__li nav__li--nesting">
-                <a href="#" class="link1 nav__links">Products</a>
+                <a href="#1" class="link1 nav__links">Products</a>
                 <!-- Tengo que eliminar esta clase -->
                 <ul class="nav__nesting1 nav__nesting">
                   <li class="nesting__li">
@@ -37,7 +37,7 @@
                 </ul>
               </li>
               <li class="nav__li nav__li--nesting">
-                <a href="#" class="link2 nav__links">Contact</a>
+                <a href="#2" class="link2 nav__links">Contact</a>
                 <ul class="nav__nesting2 nav__nesting">
                   <li class="nesting__li">
                     <a href="" class="nesting__link">contact1</a>
@@ -55,8 +55,21 @@
               </li>
             </ul>
           </div>
-          <div class="contenedor__iconos">
+          <div class="contenedor__iconos container__cart">
             <ion-icon class="icono__cart" name="cart-outline"></ion-icon>
+            <span id="contador__productos"> 0</span>
+
+            <div class="contenedor__Cart--products hidden-cart">
+              <div class="cart__products">
+                <div class="cart__prooduts--info">
+                  <span class="cantidad-producto-cart"></span>
+                  <ion-icon class="icon__close" name="close-outline"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contenedor__iconos">
             <ion-icon class="icono__main" name="menu-outline"></ion-icon>
           </div>
         </section>
