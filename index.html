@@ -17,6 +17,7 @@
           <div class="ul__container">
             <ul class="nav__ul">
               <li class="nav__li"><a href="#" class="nav__link">Home</a></li>
+              <ion-icon class="icon__close" name="close-outline"></ion-icon>
               <li class="nav__li"><a href="#" class="nav__link">About</a></li>
               <li class="nav__li nav__li--nesting">
                 <a href="#1" class="link1 nav__links">Products</a>
@@ -54,29 +55,28 @@
                 </ul>
               </li>
             </ul>
-          </div>
-          <div class="contenedor__iconos container__cart">
-            <ion-icon class="icono__cart" name="cart-outline"></ion-icon>
-            <span id="contador__productos"> 0</span>
-
-            <div class="contenedor__Cart--products hidden-cart">
-              <div class="cart__products">
-                <div class="cart__prooduts--info">
-                  <span class="cantidad-producto-cart"></span>
-                  <ion-icon class="icon__close" name="close-outline"></ion-icon>
-                </div>
-              </div>
+            <div class="contenedor__iconos container__cart">
+              <ion-icon class="icon__cart" name="cart-outline"> </ion-icon>
+              <ion-icon class="icon__main" name="menu-outline"></ion-icon>
             </div>
           </div>
-
-          <div class="contenedor__iconos">
-            <ion-icon class="icono__main" name="menu-outline"></ion-icon>
-          </div>
+          <!-- Creamos 3 secciones principales una los titulos la otra los
+            productos y la otra total -->
         </section>
       </nav>
     </header>
 
     <main>
+      <div class="buy__cart">
+        <ul class="nav__cart">
+          <li><p class="cart__p">Imagen</p></li>
+          <li><p class="cart__p">Nombre</p></li>
+          <li><p class="cart__p">Precio</p></li>
+          <li><p class="cart__p">Cantidad</p></li>
+        </ul>
+        <button class="button__cart">Vaciar carrito</button>
+      </div>
+      <!-- Aqui va la seccion de las card -->
       <section class="principal">
         <div class="gallery">
           <div class="content">

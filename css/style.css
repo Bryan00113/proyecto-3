@@ -85,70 +85,57 @@ h6 {
     align-items: center;
     height: 80px;
 
-    .nav__container {
+    .ul__container {
         display: flex;
         align-items: center;
-        justify-content: center;
-
-
-
     }
 
     .nav__ul {
         display: flex;
         gap: 4rem;
         margin-right: 4rem;
-        transition: transform .3s;
-        -webkit-transition: transform .3s;
-        -moz-transition: transform .3s;
-        -ms-transition: transform .3s;
-        -o-transition: transform .3s;
-    }
-
-    /* Aqui es donde centramos los 4  enlaces principales */
-    .nav__li {
-        position: relative;
-        display: flex;
-        align-items: center;
-        transition: .3s aese;
-        -webkit-transition: .3s aese;
-        -moz-transition: .3s aese;
-        -ms-transition: .3s aese;
-        -o-transition: .3s aese;
-
-
-    }
-
-    .nav_links {
-        padding: 2rem 0 2rem 0;
-        transition: transform .3s;
-        -webkit-transition: transform .3s;
-        -moz-transition: transform .3s;
-        -ms-transition: transform .3s;
-        -o-transition: transform .3s;
-    }
+        animation: .3s ease;
+        -webkit-animation: .3s ease;
 
 
 
 
-    .nav__nesting {
-        position: absolute;
-        top: 100%;
-        background: var(--color__principal);
-        width: 120px;
-        height: 168px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        display: none;
-        padding: 3rem 0 0 0;
-        line-height: 3.4rem;
+
+        /*Aquiesdondecentramoslos4enlacesprincipales*/
+        .nav__li {
+            position: relative;
+            display: flex;
+            align-items: center;
 
 
-        &.activo {
-            /* position: absolute;
+        }
+
+        .nav_links {
+            padding: 2rem 0 2rem 0;
+
+        }
+
+
+
+
+        .nav__nesting1 {
+            position: absolute;
+            top: 100%;
+            background: var(--color__principal);
+            width: 120px;
+            height: 168px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            display: none;
+            padding: 3rem 0 0 0;
+            line-height: 3.4rem;
+
+
+            &.activo {
+                /* position: absolute;
             top: 100%;
             background: var(--color__principal);
             width: 120px;
@@ -161,33 +148,68 @@ h6 {
             display: block;
             padding: 3rem 0 2rem 0;
             line-height: 3.4rem; */
-            display: block;
+                display: block;
+            }
+
         }
 
+        .nav__nesting2 {
+            position: absolute;
+            top: 100%;
+            background: var(--color__principal);
+            width: 120px;
+            height: 168px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            display: none;
+            padding: 3rem 0 0 0;
+            line-height: 3.4rem;
+
+
+            &.activo {
+                /* position: absolute;
+            top: 100%;
+            background: var(--color__principal);
+            width: 120px;
+            height: 168px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            display: block;
+            padding: 3rem 0 2rem 0;
+            line-height: 3.4rem; */
+                display: block;
+            }
+
+        }
+
+
+
+
+
+        .contenedor__iconos {
+            margin: 2.6rem 3rem 0 0;
+        }
+
+
     }
 
-    /* .nav__li--nesting:hover .nav__nesting {
-        color: #faebeb;
-        display: block;
-    }
-
-} */
-
-    .contenedor__iconos {
-        margin: 2.6rem 3rem 0 0;
-    }
-
-    .icono__cart {
+    .icon__cart {
         font-size: 26px;
-        z-index: 2;
 
         &:hover {
             color: #f2f2f2;
         }
 
+
     }
 
-    .icono__main {
+    .icon__main {
         font-size: 26px;
         padding-left: 1rem;
         display: none;
@@ -199,11 +221,75 @@ h6 {
 
     .icon__close {
         font-size: 26px;
+        position: absolute;
+        right: 90%;
+        top: 6%;
+        display: none;
+    }
+}
+
+/* Aqui vamos a editar la seccion cart */
+.buy__cart {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    background: var(--color__principal);
+    top: 16%;
+    z-index: 1;
+    right: 100%;
+
+
+    &.activo {
+
+        right: 0;
     }
 
 }
 
+.nav__cart {
+    display: flex;
+    padding: 2rem 0 2rem 1.3rem;
+    gap: 3rem;
+    border-bottom: #dad0d0 solid thin;
 
+    .cart__p {
+        font-size: 1.4rem;
+        color: #000;
+    }
+}
+
+.button__cart {
+    position: absolute;
+    bottom: 50;
+    right: 10%;
+    background: #eaf2fc;
+    width: 80%;
+    padding: 1.4rem 0 1.4rem 0;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border: none;
+    margin-top: 2rem;
+    cursor: pointer;
+
+
+    &:hover {
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+        color: var(--color__principal);
+
+    }
+
+
+
+}
+
+/*  Aqui se esta editando las cards */
 .gallery {
     width: 100%;
     margin: 50px;
@@ -228,11 +314,6 @@ h6 {
         padding-top: 10px;
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
         background: #f2f2f2;
-        transition: transform .3s;
-        -webkit-transition: transform .3s;
-        -moz-transition: transform .3s;
-        -ms-transition: transform .3s;
-        -o-transition: transform .3s;
     }
 
     .content:hover {
@@ -260,9 +341,8 @@ h6 {
     }
 
 
+
 }
-
-
 
 
 @media(max-width:796px) {
@@ -291,6 +371,7 @@ h6 {
             &.activo {
                 right: -10%;
                 display: block;
+                z-index: 1;
 
 
             }
@@ -301,7 +382,7 @@ h6 {
             flex-direction: column;
             align-items: start;
             justify-content: center;
-            margin: 0 0 2rem 0;
+            padding: 5rem 0 2rem 0;
 
 
         }
@@ -319,17 +400,36 @@ h6 {
         &.activo {
             display: block;
         }
+
+        .icon__close {
+            display: block;
+            cursor: pointer;
+
+            &:hover {
+                color: #f2f2f2;
+                cursor: pointer;
+            }
+
+
+        }
     }
 
     .contenedor__iconos {
         display: flex;
 
-        .icono__main {
+
+        .icon__main {
             display: block;
         }
+
+
     }
 
+    .buy__card {
+        padding-top: 2rem;
+    }
 }
+
 
 
 /* Estos son para poder centrar el contenido que aqui estan mal pcentradoss */
