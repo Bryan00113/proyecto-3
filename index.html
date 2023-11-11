@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./normalice.css" />
+    <link rel="stylesheet" href="./css/normalice.css" />
     <title>Pagina bryan</title>
   </head>
 
   <body>
-    <header class="header">
+    <header>
       <nav class="nav">
-        <h2>Bryan Muñoz</h2>
         <section class="nav__container">
           <div class="ul__container">
             <ul class="nav__ul">
@@ -20,7 +19,13 @@
               <ion-icon class="icon__close" name="close-outline"></ion-icon>
               <li class="nav__li"><a href="#" class="nav__link">About</a></li>
               <li class="nav__li nav__li--nesting">
-                <a href="#1" class="link1 nav__links">Products</a>
+                <a href="#1" class="link1 nav__links"
+                  >Products
+                  <ion-icon
+                    class="icon__flecha"
+                    name="chevron-forward-outline"
+                  ></ion-icon
+                ></a>
                 <!-- Tengo que eliminar esta clase -->
                 <ul class="nav__nesting1 nav__nesting">
                   <li class="nesting__li">
@@ -38,7 +43,13 @@
                 </ul>
               </li>
               <li class="nav__li nav__li--nesting">
-                <a href="#2" class="link2 nav__links">Contact</a>
+                <a href="#2" class="link2 nav__links"
+                  >Contact
+                  <ion-icon
+                    class="icon__flecha"
+                    name="chevron-forward-outline"
+                  ></ion-icon
+                ></a>
                 <ul class="nav__nesting2 nav__nesting">
                   <li class="nesting__li">
                     <a href="" class="nesting__link">contact1</a>
@@ -60,123 +71,197 @@
               <ion-icon class="icon__main" name="menu-outline"></ion-icon>
             </div>
           </div>
-          <!-- Creamos 3 secciones principales una los titulos la otra los
-            productos y la otra total -->
         </section>
+        <h2>Bryan Muñoz</h2>
       </nav>
     </header>
 
     <main>
-      <div class="buy__cart">
-        <ul class="nav__cart">
-          <li><p class="cart__p">Imagen</p></li>
-          <li><p class="cart__p">Nombre</p></li>
-          <li><p class="cart__p">Precio</p></li>
-          <li><p class="cart__p">Cantidad</p></li>
-        </ul>
-        <button class="button__cart">Vaciar carrito</button>
-      </div>
+      <section class="banner">
+        <div class="banner__efect"></div>
+      </section>
+
+      <!-- seccion cart -->
+
+      <section class="cart" id="carrito">
+        <h2 class="cart__title">Tu carrito</h2>
+        <div class="cart__content">
+          <div class="cart__box">
+            <img class="cart__img" src="./utilidades/producto3.png" alt="" />
+            <div class="detailBox">
+              <div class="cart__product-tittle"><h3>Relog analogico</h3></div>
+              <div class="cart__price">$45</div>
+              <inputo
+                class="cart__quantity"
+                type="number"
+                name="cantidad"
+                id=""
+                value="1"
+              />
+            </div>
+            <!-- Remove of cart -->
+            <ion-icon class="cart__remove" name="trash-outline"></ion-icon>
+          </div>
+          <div class="conteiner__cart"></div>
+        </div>
+        <!-- TOTAL -->
+        <div class="total">
+          <div class="total__title">Total</div>
+          <div class="total__price">$0o</div>
+        </div>
+        <button class="btn__buy">Comprar</button>
+        <ion-icon id="close__cart" name="close-outline"></ion-icon>
+      </section>
+
       <!-- Aqui va la seccion de las card -->
-      <section class="principal">
+      <section class="principal" id="listProducts">
         <div class="gallery">
           <div class="content">
-            <img src="./utilidades/producto1.png" alt="Reloj analogico" />
-            <h3>Reloj Mwtalico</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              porro aliquid nobis. Natus commodi nesciunt minima similique
-              veniam modi in quia
-            </p>
-            <h6>$100.00</h6>
-            <button class="buy-1 button-card">Button</button>
+            <img
+              class="img"
+              src="./utilidades/producto1.png"
+              alt="Reloj analogico"
+            />
+            <div class="info__card">
+              <h3>Reloj Metalico</h3>
+              <p></p>
+
+              <div class="precio">
+                <p>$100.00</p>
+                <p class="descuento">$40</p>
+              </div>
+              <button id="1" class="buy-1 button-card">Button</button>
+            </div>
+          </div>
+
+          <div class="content">
+            <img
+              class="img"
+              src="./utilidades/producto2.png"
+              alt="Reloj analogico"
+            />
+
+            <div class="info__card">
+              <h3>Reloj Analogico</h3>
+              <div class="precio">
+                <p>$120.00</p>
+                <p class="descuento">$40</p>
+              </div>
+              <button class="buy-2 button-card" id="2">Button</button>
+            </div>
+          </div>
+
+          <div class="content">
+            <img
+              class="img"
+              src="./utilidades/producto3.png"
+              alt="Reloj analogico"
+            />
+
+            <div class="info__card">
+              <h3>Reloj metalico</h3>
+              <div class="precio">
+                <p>$120.00</p>
+                <p class="descuento">$40</p>
+              </div>
+              <button id="3" class="buy-3 button-card">Button</button>
+            </div>
           </div>
           <div class="content">
-            <img src="./utilidades/producto2.png" alt="Reloj analogico" />
-            <h3>Reloj metalico</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              porro aliquid nobis. Natus commodi nesciunt minima similique
-              veniam modi in quia
-            </p>
-            <h6>$120.00</h6>
-            <button class="buy-2 button-card">Button</button>
+            <img
+              class="img"
+              src="./utilidades/producto4.png"
+              alt="Reloj analogico"
+            />
+
+            <div class="info__card">
+              <h3>Motorola e20</h3>
+              <div class="precio">
+                <p>$120.00</p>
+                <p class="descuento">$40</p>
+              </div>
+              <button id="4" class="buy-4 button-card">Button</button>
+            </div>
           </div>
           <div class="content">
-            <img src="./utilidades/producto3.png" alt="Reloj analogico" />
-            <h3>Reloj metalico</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              porro aliquid nobis. Natus commodi nesciunt minima similique
-              veniam modi in quia
-            </p>
-            <h6>$120.00</h6>
-            <button class="buy-3 button-card">Button</button>
+            <img
+              class="img"
+              src="./utilidades/producto5.png"
+              alt="Reloj analogico"
+            />
+
+            <div class="info__card">
+              <h3>Reloj metalico</h3>
+              <div class="precio">
+                <p>$120.00</p>
+                <p class="descuento">$40</p>
+              </div>
+              <button id="5" class="buy-5 button-card">Button</button>
+            </div>
           </div>
           <div class="content">
-            <img src="./utilidades/producto4.png" alt="Reloj analogico" />
-            <h3>Motorila e20</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              porro aliquid nobis. Natus commodi nesciunt minima similique
-              veniam modi in quia
-            </p>
-            <h6>$120.00</h6>
-            <button class="buy-4 button-card">Button</button>
+            <img
+              class="img"
+              src="./utilidades/producto6.webp"
+              alt="Reloj analogico"
+            />
+
+            <div class="info__card">
+              <h3>Motorola e21</h3>
+              <div class="precio">
+                <p>$220.00</p>
+                <p class="descuento">$40</p>
+              </div>
+              <button id="6" class="buy-6 button-card">Button</button>
+            </div>
           </div>
           <div class="content">
-            <img src="./utilidades/producto5.png" alt="Reloj analogico" />
-            <h3>Reloj metalico</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              porro aliquid nobis. Natus commodi nesciunt minima similique
-              veniam modi in quia
-            </p>
-            <h6>$120.00</h6>
-            <button class="buy-5 button-card">Button</button>
+            <img
+              class="img"
+              src="./utilidades/producto7.webp"
+              alt="Reloj analogico"
+            />
+
+            <div class="info__card">
+              <h3>Motorola e20</h3>
+              <div class="precio">
+                <p>$220.00</p>
+                <p class="descuento">$40</p>
+              </div>
+              <button id="7" class="buy-7 button-card">Button</button>
+            </div>
           </div>
           <div class="content">
-            <img src="./utilidades/producto6.webp" alt="Reloj analogico" />
-            <h3>Motorola e21</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              porro aliquid nobis. Natus commodi nesciunt minima similique
-              veniam modi in quia
-            </p>
-            <h6>$220.00</h6>
-            <button class="buy-6 button-card">Button</button>
+            <img
+              class="img"
+              src="./utilidades/producto8.webp"
+              alt="Reloj analogico"
+            />
+
+            <div class="info__card">
+              <h3>Motorola e22</h3>
+              <div class="precio">
+                <p>$240.00</p>
+                <p class="descuento">$40</p>
+              </div>
+              <button id="8" class="buy-8 button-card">Button</button>
+            </div>
           </div>
           <div class="content">
-            <img src="./utilidades/producto7.webp" alt="Reloj analogico" />
-            <h3>Motorola e20</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              porro aliquid nobis. Natus commodi nesciunt minima similique
-              veniam modi in quia
-            </p>
-            <h6>$220.00</h6>
-            <button class="buy-7 button-card">Button</button>
-          </div>
-          <div class="content">
-            <img src="./utilidades/producto8.webp" alt="Reloj analogico" />
-            <h3>Motorola e22</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              porro aliquid nobis. Natus commodi nesciunt minima similique
-              veniam modi in quia
-            </p>
-            <h6>$240.00</h6>
-            <button class="buy-8 button-card">Button</button>
-          </div>
-          <div class="content">
-            <img src="./utilidades/producto9.webp" alt="Reloj analogico" />
-            <h3>Motorola e20</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              porro aliquid nobis. Natus commodi nesciunt minima similique
-              veniam modi in quia
-            </p>
-            <h6>$220.00</h6>
-            <button class="buy-9 button-card">Button</button>
+            <img
+              class="img"
+              src="./utilidades/producto9.webp"
+              alt="Reloj analogico"
+            />
+
+            <div class="info__card">
+              <h3>Motorola e20</h3>
+              <div class="prrecio">
+                <p>$220.00</p>
+                <p class="descuento">$40</p>
+              </div>
+              <button id="9" class="buy-9 button-card">Button</button>
+            </div>
           </div>
         </div>
       </section>
